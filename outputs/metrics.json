@@ -1,0 +1,81 @@
+{
+    "selected_model": "Extra Trees",
+    "selection_method": "Highest mean 5-fold CV F1-score for at-risk class, using training split only",
+    "tuning_results": [
+        {
+            "model": "Logistic Regression",
+            "cv_accuracy_mean": 0.6611607142857142,
+            "cv_precision_at_risk_mean": 0.5234798534798535,
+            "cv_recall_at_risk_mean": 0.5599999999999999,
+            "cv_f1_at_risk_mean": 0.5233966162803345,
+            "cv_balanced_accuracy_mean": 0.6363676633444074,
+            "best_params": {
+                "classifier__C": 50,
+                "classifier__class_weight": "balanced"
+            }
+        },
+        {
+            "model": "Random Forest",
+            "cv_accuracy_mean": 0.6897321428571429,
+            "cv_precision_at_risk_mean": 0.5569257086999022,
+            "cv_recall_at_risk_mean": 0.49285714285714277,
+            "cv_f1_at_risk_mean": 0.5064457941338926,
+            "cv_balanced_accuracy_mean": 0.6405038759689923,
+            "best_params": {
+                "classifier__class_weight": "balanced",
+                "classifier__max_depth": 4,
+                "classifier__min_samples_leaf": 2,
+                "classifier__n_estimators": 300
+            }
+        },
+        {
+            "model": "Extra Trees",
+            "cv_accuracy_mean": 0.7024801587301588,
+            "cv_precision_at_risk_mean": 0.5671361662073736,
+            "cv_recall_at_risk_mean": 0.520952380952381,
+            "cv_f1_at_risk_mean": 0.5330502727406752,
+            "cv_balanced_accuracy_mean": 0.6569324473975636,
+            "best_params": {
+                "classifier__class_weight": "balanced",
+                "classifier__max_depth": null,
+                "classifier__min_samples_leaf": 2,
+                "classifier__n_estimators": 600
+            }
+        },
+        {
+            "model": "Support Vector Machine",
+            "cv_accuracy_mean": 0.6928571428571428,
+            "cv_precision_at_risk_mean": 0.5950776042426896,
+            "cv_recall_at_risk_mean": 0.49190476190476196,
+            "cv_f1_at_risk_mean": 0.5157473062796143,
+            "cv_balanced_accuracy_mean": 0.642408637873754,
+            "best_params": {
+                "classifier__C": 50,
+                "classifier__class_weight": "balanced",
+                "classifier__gamma": 0.01
+            }
+        }
+    ],
+    "test_accuracy": 0.6962,
+    "test_balanced_accuracy": 0.6266,
+    "test_precision_at_risk": 0.55,
+    "test_recall_at_risk": 0.4231,
+    "test_f1_at_risk": 0.4783,
+    "train_rows": 316,
+    "test_rows": 79,
+    "features_used": [
+        "age",
+        "studytime",
+        "failures",
+        "schoolsup",
+        "famsup",
+        "paid",
+        "activities",
+        "higher",
+        "internet",
+        "goout",
+        "health",
+        "absences"
+    ],
+    "positive_class": "At risk (G3 < 10)"
+}

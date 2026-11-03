@@ -1,0 +1,133 @@
+{
+  "task": "Predict G3 < 10 using G1, G2 and student background features",
+  "selected_model": "Random Forest",
+  "features": [
+    "school",
+    "sex",
+    "age",
+    "address",
+    "famsize",
+    "Pstatus",
+    "Medu",
+    "Fedu",
+    "Mjob",
+    "Fjob",
+    "reason",
+    "guardian",
+    "traveltime",
+    "studytime",
+    "failures",
+    "schoolsup",
+    "famsup",
+    "paid",
+    "activities",
+    "nursery",
+    "higher",
+    "internet",
+    "romantic",
+    "famrel",
+    "freetime",
+    "goout",
+    "Dalc",
+    "Walc",
+    "health",
+    "absences",
+    "G1",
+    "G2"
+  ],
+  "target": "G3 < 10",
+  "cross_validation": [
+    {
+      "model": "Logistic Regression",
+      "cv_accuracy": 0.9116071428571428,
+      "cv_accuracy_std": 0.03745798435699239,
+      "cv_f1_at_risk": 0.8736875325550756,
+      "cv_recall_at_risk": 0.9333333333333333,
+      "cv_precision_at_risk": 0.8233125570082092,
+      "cv_balanced_accuracy": 0.9173311184939094
+    },
+    {
+      "model": "Random Forest",
+      "cv_accuracy": 0.9177579365079364,
+      "cv_accuracy_std": 0.02717674599361948,
+      "cv_f1_at_risk": 0.8803843617205229,
+      "cv_recall_at_risk": 0.9238095238095237,
+      "cv_precision_at_risk": 0.8451221532091097,
+      "cv_balanced_accuracy": 0.9195459579180512
+    },
+    {
+      "model": "Extra Trees",
+      "cv_accuracy": 0.848313492063492,
+      "cv_accuracy_std": 0.0498489940683319,
+      "cv_f1_at_risk": 0.7614976618648588,
+      "cv_recall_at_risk": 0.741904761904762,
+      "cv_precision_at_risk": 0.789617401637862,
+      "cv_balanced_accuracy": 0.8215060908084164
+    },
+    {
+      "model": "RBF SVM",
+      "cv_accuracy": 0.8673115079365079,
+      "cv_accuracy_std": 0.04100295745621539,
+      "cv_f1_at_risk": 0.8168701843694546,
+      "cv_recall_at_risk": 0.9047619047619048,
+      "cv_precision_at_risk": 0.7484391929909171,
+      "cv_balanced_accuracy": 0.8771317829457363
+    },
+    {
+      "model": "Gradient Boosting",
+      "cv_accuracy": 0.9177579365079364,
+      "cv_accuracy_std": 0.02717674599361948,
+      "cv_f1_at_risk": 0.876866575159258,
+      "cv_recall_at_risk": 0.8952380952380953,
+      "cv_precision_at_risk": 0.8641854636591478,
+      "cv_balanced_accuracy": 0.9122369878183832
+    }
+  ],
+  "holdout_test": {
+    "accuracy": 0.9113924050632911,
+    "balanced_accuracy": 0.9045718432510885,
+    "precision_at_risk": 0.8518518518518519,
+    "recall_at_risk": 0.8846153846153846,
+    "f1_at_risk": 0.8679245283018868,
+    "confusion_matrix": [
+      [
+        49,
+        4
+      ],
+      [
+        3,
+        23
+      ]
+    ],
+    "classification_report": {
+      "Not at risk": {
+        "precision": 0.9423076923076923,
+        "recall": 0.9245283018867925,
+        "f1-score": 0.9333333333333333,
+        "support": 53.0
+      },
+      "At risk": {
+        "precision": 0.8518518518518519,
+        "recall": 0.8846153846153846,
+        "f1-score": 0.8679245283018868,
+        "support": 26.0
+      },
+      "accuracy": 0.9113924050632911,
+      "macro avg": {
+        "precision": 0.8970797720797721,
+        "recall": 0.9045718432510885,
+        "f1-score": 0.9006289308176101,
+        "support": 79.0
+      },
+      "weighted avg": {
+        "precision": 0.9125374157019728,
+        "recall": 0.9113924050632911,
+        "f1-score": 0.9118063848419712,
+        "support": 79.0
+      }
+    },
+    "train_rows": 316,
+    "test_rows": 79
+  },
+  "caution": "G1 and G2 must be available at prediction time. This is not an early prediction before prior-period grades. The dataset is small and from two Portuguese schools. Treat the test score as exploratory because this split has been examined in earlier development."
+}

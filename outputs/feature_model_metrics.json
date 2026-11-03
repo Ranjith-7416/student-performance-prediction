@@ -1,0 +1,126 @@
+{
+    "selected_model": "Balanced Logistic Regression",
+    "selection_metric": "Repeated 5-fold CV at-risk F1",
+    "feature_columns": [
+        "school",
+        "sex",
+        "age",
+        "address",
+        "famsize",
+        "Pstatus",
+        "Medu",
+        "Fedu",
+        "Mjob",
+        "Fjob",
+        "reason",
+        "guardian",
+        "traveltime",
+        "studytime",
+        "failures",
+        "schoolsup",
+        "famsup",
+        "paid",
+        "activities",
+        "nursery",
+        "higher",
+        "internet",
+        "romantic",
+        "famrel",
+        "freetime",
+        "goout",
+        "Dalc",
+        "Walc",
+        "health",
+        "absences"
+    ],
+    "excluded_columns": [
+        "G1",
+        "G2",
+        "G3"
+    ],
+    "cross_validation_results": [
+        {
+            "model": "Balanced Logistic Regression",
+            "cv_accuracy_mean": 0.6127976190476191,
+            "cv_accuracy_std": 0.04646048102453479,
+            "cv_precision_at_risk": 0.43086719050460714,
+            "cv_recall_at_risk": 0.5193650793650794,
+            "cv_f1_at_risk": 0.4671395618936358,
+            "cv_balanced_accuracy": 0.5890660760428202
+        },
+        {
+            "model": "Random Forest",
+            "cv_accuracy_mean": 0.6876984126984126,
+            "cv_accuracy_std": 0.054156445267936074,
+            "cv_precision_at_risk": 0.5558163276352132,
+            "cv_recall_at_risk": 0.3141269841269842,
+            "cv_f1_at_risk": 0.3939669694126543,
+            "cv_balanced_accuracy": 0.5926854928017719
+        },
+        {
+            "model": "Extra Trees",
+            "cv_accuracy_mean": 0.6720238095238094,
+            "cv_accuracy_std": 0.04969772734289392,
+            "cv_precision_at_risk": 0.5026812999447271,
+            "cv_recall_at_risk": 0.3493650793650794,
+            "cv_f1_at_risk": 0.4068407599259352,
+            "cv_balanced_accuracy": 0.5899464747139166
+        },
+        {
+            "model": "Balanced SVM",
+            "cv_accuracy_mean": 0.6254464285714285,
+            "cv_accuracy_std": 0.0556157701125731,
+            "cv_precision_at_risk": 0.44838844712745995,
+            "cv_recall_at_risk": 0.4614285714285714,
+            "cv_f1_at_risk": 0.4454257176856053,
+            "cv_balanced_accuracy": 0.5837227759320781
+        }
+    ],
+    "holdout_test_results": {
+        "accuracy": 0.6708860759493671,
+        "balanced_accuracy": 0.6763425253991291,
+        "precision_at_risk": 0.5,
+        "recall_at_risk": 0.6923076923076923,
+        "f1_at_risk": 0.5806451612903226,
+        "confusion_matrix": [
+            [
+                35,
+                18
+            ],
+            [
+                8,
+                18
+            ]
+        ],
+        "classification_report": {
+            "Not at risk": {
+                "precision": 0.813953488372093,
+                "recall": 0.660377358490566,
+                "f1-score": 0.7291666666666666,
+                "support": 53.0
+            },
+            "At risk": {
+                "precision": 0.5,
+                "recall": 0.6923076923076923,
+                "f1-score": 0.5806451612903226,
+                "support": 26.0
+            },
+            "accuracy": 0.6708860759493671,
+            "macro avg": {
+                "precision": 0.6569767441860466,
+                "recall": 0.6763425253991291,
+                "f1-score": 0.6549059139784946,
+                "support": 79.0
+            },
+            "weighted avg": {
+                "precision": 0.7106270238445687,
+                "recall": 0.6708860759493671,
+                "f1-score": 0.6802861712263508,
+                "support": 79.0
+            }
+        },
+        "train_rows": 316,
+        "test_rows": 79
+    },
+    "note": "The holdout split was examined during earlier development. Treat this result as exploratory, not as an independent final generalization estimate. G1, G2 and G3 were excluded from inputs."
+}

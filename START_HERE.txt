@@ -1,0 +1,11 @@
+START HERE
+
+1. Open Terminal and go to this folder.
+2. Create and activate a Python virtual environment.
+3. Install dependencies: pip install -r requirements.txt
+4. Download the UCI dataset: python download_data.py
+5. Explore data: python src/eda.py
+6. Train model: python src/train_model.py
+7. Launch app: streamlit run app.py
+
+Read README.md for full instructions and explanations.
